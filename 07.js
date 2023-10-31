@@ -5,6 +5,7 @@
 //toLowerCase();
 //slice();
 
+// let firstName = "   dibya borah   ";
 let firstName = "dibya borah";
 // console.log(firstName.length);
 
@@ -39,5 +40,5 @@ let firstName = "dibya borah";
 // let newString = firstName.slice(0,3)
 // console.log(newString);
 
-let newString = firstName.slice(0,3) // 
-console.log(firstName.slice(0));
+// let newString = firstName.slice(0,3) 
+// console.log(firstName.slice(0));

@@ -13,7 +13,7 @@
 
 // --------------------------------*---------------------------------- 
 
-// == vs ==
+// == vs ===
 
 // console.log(num1 == num2);--> // Only compare the value not the data type or the  typeof of the value
 //== Check value not the data type or typeof

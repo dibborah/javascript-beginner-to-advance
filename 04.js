@@ -17,12 +17,17 @@
 // console.log(firstName);
 
 //# Vriable can be re-assigned of re-declared after writting let if before the re-assigned variable let keyword is not  written
-let firstName = "dib";
- firstName = "niki"
-console.log(firstName);
+// let firstName = "dib";
+//  firstName = "niki"
+// console.log(firstName);
 
 
 // let varible can never be declared more than once but can be re-assigned more than once if the let keyword is not written more than once
 
 
 //Block scoping vs function scoping will learn later in the video
+
+
+
+
+
