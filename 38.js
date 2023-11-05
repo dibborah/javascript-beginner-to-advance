@@ -54,5 +54,6 @@ const arr1 = ["mango", "papaya"];
 for (let key of arr1){
     console.log(key);
 }
+
 //## Just out of the blue point// The trim() method of used mostly on string cut off or trims the extra spaces in a string
 
