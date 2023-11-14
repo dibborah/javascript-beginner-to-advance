@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Note: Parse: Brower reading the code line by line
+    Parse -> Read// Parse matlb read karna baas
+//Parsing: Converting the code into executable format -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- 1st way (Worst and 4th way)-->
+    <!-- 1. 1st way to load link js file <script src="102.js"></script>//This is the wrong way of linking a Js file
+    // If one links the js file this way then the browser when parsing the js file won't get the 
+    // below html elements used in the js file so the browser will throw error
+    -->
+
+    <!-- 3rd Way (Bad or 3rd best way)-->
+    <!-- <script src="./102.js" async></script> This is the 3rd way to link the Js file- -->
+    <!-- the async word makes the process asycn // Here the 2 steps will happen asyncally
+    //1. Parsing of the entire html file even after reaching the js file will continue along with the full loading of the Js file will happen simultaneously -->
+    <!-- But if the js file will be completely loaded and the parsing of the html file is
+    not completed the browser will stop pasing the other incomplete html file and since the 
+    loading of the js file is complete will execute it first . Now this may cause trouble as 
+    the loaded js file may include some html elements will is yet not parsed by the browser -->
+
+    <!-- 4th Way(Best Way) -->
+    <script src="./112.js" defer></script><!-- note: always write defer in the script tag others the browser may have troble when executing the script // Chances are 80%-->
+    <!-- Advanatge and better than all the other way b/c 
+    //Parsing and loading happen simultaneously.
+    This way increases the website performance 
+    It saves time. Time effecient way-->
+
+    <!-- This is the updated and improved verson of the 3rd async way
+    In the sync way when the js file loading process way complete the browser was
+    stopping the parse of the remaining html file .But in defer way even when the 
+    loading of the js file is complete the browser won't execute the js file and stop 
+    parsing the html file will not execute the js file even after it is loading.
+    It will finish parsing the entire html file (even the remaining part) and 
+    when the parsing is complete then and only then will execute the already loaded and waitied Js file -->
+
+    <title>My Website</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <h1 class="logo">Website</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <!-- The class inside the li tag is called an attribute  -->
+                <!-- Similarly the href inside the a(anchor) tag is called an attribute  -->
+                <li class="nav-item"><a href="">Todo</a></li>
+                <li class="nav-item"><a href="">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="headline">
+            <h2 id="main-heading">Manage your tasks <span style="display: none;">Hello</span></h2>
+            <button class="btn btn-headline">Learn More</button>
+        </div>
+    </header>
+    <section class="section-todo container abc">
+        <h2>Your plan for today ?</h2>
+        <form class="form-todo">
+            <input type="text" placeholder="Add Todo">
+            <input type="submit" value="Add Todo" class="btn">
+        </form>
+    </section>
+    
+    <section class="section-signup container">
+        <h2>Sign Up</h2>
+        <form class="signup-form">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <!-- ish input ka type attribute hain password aur name and id attribute vi dekh skte ho password hain -->
+                <!-- type , name, id inside the input tag is called its attributes -->
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="about">About Yourself</label>
+                <textarea name="about" id="about" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn signup-btn">Submit</button>
+        </form>
+    </section>
+    <!-- 2nd way (2nd Best Way)-->
+    <!--2. 2nd way to load link js file <script src="./102.js"></script>1.Load 2. Execute // When browser reaches the js file this two processes happens-- -->
+    <!-- This two above steps when parsing by the browser will be done nicely when the script is written in this place in the html file -->
+</body>
+
+</html>
